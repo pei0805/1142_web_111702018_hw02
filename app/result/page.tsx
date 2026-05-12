@@ -15,17 +15,14 @@ export default function Result() {
 
 
   function getResult(){
-    if( psyData.score < 3 ){
-      setPsyResult(
-        <div>
-          結果 A
-          <a href="https://google.com">GOOGLE</a>
-        </div>
-      );
-    }else if( psyData.score >= 3 && psyData.score < 7 ){
-      setPsyResult(<div>結果 B</div>);
+    if( psyData.score < 12 ){
+      setPsyResult(<div>暴龍</div>);
+    }else if( psyData.score >= 12 && psyData.score < 18 ){
+      setPsyResult(<div>三角龍</div>);
+    }else if( psyData.score >= 18 && psyData.score < 23 ){
+      setPsyResult(<div>腕龍</div>);
     }else{
-      setPsyResult(<div>結果 C</div>);
+      setPsyResult(<div>迅猛龍</div>);
     }
   }
 
@@ -45,7 +42,7 @@ export default function Result() {
         {psyResult}
         
         <div 
-          className="text-white bg-black px-3 py-2" 
+          className="rounded-full text-white bg-black px-3 py-2" 
           onClick={playAgain}>
           再玩一次
         </div>

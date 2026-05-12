@@ -9,8 +9,8 @@ export default function Prepare() {
   return (
     <>
       <div className="flex flex-col items-center gap-4">
-        準備看結果
-        <Link className="text-white bg-black px-3 py-2" href="/result">看結果</Link>
+        
+        <Link className="rounded-full text-white bg-black px-3 py-2" href="/result">查看孵化成功的恐龍</Link>
       </div>
     </>
   );

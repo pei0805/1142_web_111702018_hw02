@@ -3,12 +3,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Button } from '@heroui/react';
 import { ColorSlider, Label } from '@heroui/react';
-import {parseColor} from "react-aria-components";
+import { parseColor } from "react-aria-components";
 import ActionButton from "@/component/ActionButton";
 
 export default function Home() {
-
-  const [color, setColor] = useState(parseColor("hsl(0, 100%, 50%)"));
 
   //階段名稱      路由規劃
   //1. 歡迎畫面   /
@@ -16,29 +14,25 @@ export default function Home() {
   //3. 準備看結果 /prepare
   //4. 看結果    /result
   // https://psy-test.com/love/result?id=10
-  
+
 
   return (
     <>
       <div className="flex flex-col items-center gap-4">
-        歡迎！
-        <ColorSlider
-          value={color}
-          onChange={setColor}
-          channel="hue" className="w-full max-w-xs" defaultValue="hsl(0, 100%, 50%)">
-          <Label>Hue</Label>
-          <ColorSlider.Output />
-          <ColorSlider.Track>
-            <ColorSlider.Thumb />
-          </ColorSlider.Track>
-        </ColorSlider>
+        <div className="text-left font-extrabold px-4 text-[20px]">孵化你的專屬恐龍</div>
+        <div className="text-left text-[14px] font-medium">
+          在未知的史前神秘島嶼上，<br />
+          散落著許多散發微光的遠古化石蛋。<br />
+          你在旅途中的每一個感官選擇，<br />
+          都會孵化出一隻與你性格最合拍的專屬小恐龍。<br />
+          <br />
+          現在，就背上你的探險背包，<br />
+          踏上尋找你命定恐龍的奇妙旅程吧！
+        </div>
 
-        {color.toString()}
+        <Link className="rounded-full text-white bg-black px-3 py-2" href="/question">START</Link>
 
-        <Link className="text-white bg-black px-3 py-2" href="/question">START</Link>
-        
-        <ActionButton/>
-        
+
       </div>
     </>
   );
