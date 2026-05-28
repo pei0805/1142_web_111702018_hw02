@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation"
 import { usePsyStore } from "../../store/store"
+import Image from "next/image"
 
 
 export default function Question() {
@@ -45,32 +46,36 @@ export default function Question() {
       <div className="flex flex-col items-center gap-4">
 
         <div className="flex flex-col items-center gap-[26px] mb-8">
-          <div className="text-left font-extrabold px-4 text-[20px]">{"Q" + (questionIndex + 1) + "."}</div>
-          <div className="text-left font-extrabold px-4 h-[66px] text-[20px]">{psyData.quizData[questionIndex].title}</div>
-          
-          <div className="flex flex-col items-center px-4 gap-2 w-[400px]">
-          <div className="flex items-center justify-start h-[66px] rounded-full bg-[#6E6698] text-white 
-                           hover:bg-[#8982ad] transition-transform 
-                           text-[16px] px-6 py-2 mb-1.5 w-full max-w-[320px] cursor-pointer" 
-               onClick={() => nextQuestion(0)}>{psyData.quizData[questionIndex].options[0].text}</div>
-               
-            <div className="flex items-center justify-start h-[66px] rounded-full bg-[#6E6698] text-white 
-                           hover:bg-[#8982ad] transition-transform 
-                           text-[16px] px-6 py-2 mb-1.5 w-full max-w-[320px] cursor-pointer" 
-                 onClick={() => nextQuestion(1)}>{psyData.quizData[questionIndex].options[1].text}</div>
-            <div className="flex items-center justify-start h-[66px] rounded-full bg-[#6E6698] text-white 
-                           hover:bg-[#8982ad] transition-transform 
-                           text-[16px] px-6 py-2 mb-1.5 w-full max-w-[320px] cursor-pointer" 
-                 onClick={() => nextQuestion(2)}>{psyData.quizData[questionIndex].options[2].text}</div>
-            <div className="flex items-center justify-start h-[66px] rounded-full bg-[#6E6698] text-white 
-                           hover:bg-[#8982ad] transition-transform 
-                           text-[16px] px-6 py-2 mb-1.5 w-full max-w-[320px] cursor-pointer" 
-                 onClick={() => nextQuestion(3)}>{psyData.quizData[questionIndex].options[3].text}</div>
+          <div className="bg-white border-12 border-[#95D664] rounded-[2rem] ring-[3px] ring-[#291811] p-8 min-h-[250px] flex flex-col items-center justify-center">
+            <div className="text-left font-extrabold px-4 text-[20px]">{"Q" + (questionIndex + 1) + "."}</div>
+            <div className="text-left font-extrabold px-4 min-h-[66px] text-[20px]">{psyData.quizData[questionIndex].title}</div>
+          </div>
+          <div className="flex flex-col items-center px-4 gap-2 w-full">
+            <div className="flex items-center justify-start min-h-[66px] rounded-full border-2 border-[#291811] bg-[#ccffcc] text-[#291811]
+                           font-bold hover:bg-[#67db78] transition-transform
+                           text-[16px] px-6 py-2 mb-1.5 w-full cursor-pointer
+                           shadow-[0_6px_0_-2px_#99ff99,0_6px_0_0_#291811]"
+              onClick={() => nextQuestion(0)}>{psyData.quizData[questionIndex].options[0].text}</div>
+
+            <div className="flex items-center justify-start min-h-[66px] rounded-full border-2 border-[#291811] bg-[#ccffcc] text-[#291811]
+                           font-bold hover:bg-[#67db78] transition-transform
+                           text-[16px] px-6 py-2 mb-1.5 w-full cursor-pointer
+                           shadow-[0_6px_0_-2px_#99ff99,0_6px_0_0_#291811]"
+              onClick={() => nextQuestion(1)}>{psyData.quizData[questionIndex].options[1].text}</div>
+            <div className="flex items-center justify-start min-h-[66px] rounded-full border-2 border-[#291811] bg-[#ccffcc] text-[#291811]
+                           font-bold hover:bg-[#67db78] transition-transform
+                           text-[16px] px-6 py-2 mb-1.5 w-full cursor-pointer
+                           shadow-[0_6px_0_-2px_#99ff99,0_6px_0_0_#291811]"
+              onClick={() => nextQuestion(2)}>{psyData.quizData[questionIndex].options[2].text}</div>
+            <div className="flex items-center justify-start min-h-[66px] rounded-full border-2 border-[#291811] bg-[#ccffcc] text-[#291811]
+                           font-bold hover:bg-[#67db78] transition-transform
+                           text-[16px] px-6 py-2 mb-1.5 w-full cursor-pointer
+                           shadow-[0_6px_0_-2px_#99ff99,0_6px_0_0_#291811]"
+              onClick={() => nextQuestion(3)}>{psyData.quizData[questionIndex].options[3].text}</div>
           </div>
 
         </div>
 
-        {/* <Link className="text-white bg-black px-3 py-2" href="/prepare">準備看結果</Link> */}
       </div>
     </>
   );

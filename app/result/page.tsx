@@ -42,7 +42,7 @@ export default function Result() {
         {psyResult}
         
         <div 
-          className="rounded-full text-white bg-black px-3 py-2" 
+          className="rounded-full font-bold border-2 border-[#291811] text-[#291811] bg-[#fffc7c] px-10 py-2 shadow-[0_6px_0_-2px_#FFB347,0_6px_0_0_#291811]" 
           onClick={playAgain}>
           再玩一次
         </div>
