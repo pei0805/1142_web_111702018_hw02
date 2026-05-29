@@ -18,9 +18,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-8">
-        <div className="text-left font-black px-4 text-[40px] text-[#291811]">孵化你的專屬恐龍</div>
-        <div className="text-left text-[14px] font-medium text-[#291811]">
+      <div className="flex flex-col items-center p-4">
+      <img alt="title" src="/title.png"></img>
+        <div className="text-left text-[16px] font-medium text-[#291811]">
           在未知的史前神秘島嶼上，<br />
           散落著許多散發微光的遠古化石蛋。<br />
           你在旅途中的每一個感官選擇，<br />
@@ -29,9 +29,12 @@ export default function Home() {
           現在，就背上你的探險背包，<br />
           踏上尋找你命定恐龍的奇妙旅程吧！
         </div>
+        <img alt="Dinosaur" src="/Dinosaur.png"></img>
         <Link href="/question" className="rounded-full font-bold border-2 border-[#291811] text-[#291811] bg-[#fffc7c] px-10 py-2 shadow-[0_6px_0_-2px_#FFB347,0_6px_0_0_#291811]">
           開始測驗
         </Link>
+
+        
 
       </div>
     </>
